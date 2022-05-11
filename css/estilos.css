@@ -196,6 +196,14 @@ main {
     cursor: pointer;
 }
 
+.productos__flex:hover {
+    transform: scale(1.1);
+}
+
+.productos__flex {
+    transition: all 0.5s;
+}
+
 .main__imagenesUno {
     display: flex;
 
