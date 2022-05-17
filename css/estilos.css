@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(218, 207, 195);
+    background-color: rgba(237, 229, 220, 0.975);
     flex-wrap: wrap;
     font-family: sans-serif;
 
@@ -22,11 +22,11 @@ header {
     grid-area: h;
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(190, 179, 157);  
+    background-color: rgba(237, 229, 220, 0.975);  
     height: 100px;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 765px;
+    padding-bottom: 740px;
 }
 
 .header--nohtml {
@@ -52,6 +52,7 @@ header {
 
 
 
+
 .header__navegacion {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +67,7 @@ header {
 li {
     padding: 15px;
 }
+
 
 a {
     text-decoration: none;
@@ -84,11 +86,58 @@ a {
 }
 
 
+
 main {
     grid-area: m;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+}
+
+.main__venta {
+    display: flex;
+    background-color: rgba(164, 156, 147, 0.507);
+    align-items: center;
+    justify-content: center;
+}
+
+h5 {
+    padding-top: 2rem;
+    padding-bottom: 0.7rem;
+}
+
+h6 {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+.imagenes__productos {
+    width: 13.9rem;
+    height: 13rem;
+}
+
+.carta {
+    width: 18rem;
+    height: 18rem;
+    padding-bottom: 2rem;
+}
+
+.cartita {
+    background-size: contain;
+}
+
+.cartitauno {
+    background-size: contain;
+}
+
+.icono__gmail {
+    width: 18px;
+    height: 18px;
+    padding-bottom: 5px;
+    cursor: pointer;
+
 }
 
 .main__titulo {
@@ -183,25 +232,31 @@ main {
     gap: 3rem;
 }
 
+
+
 .productos__flex {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: rgba(206, 176, 151, 0.511) 5px solid;
+    border-radius: 0.7rem;
+    background-color: rgba(222, 173, 120, 0.393);
 }
 
-.boton__productos {
-    width: 240px;
-    background-color: #ffe66658;
-    border-radius: 20px;
-    cursor: pointer;
+
+
+.botones__productos {
+    display: flex;
+    flex-direction: row;
+    padding: 1rem;
 }
 
 .productos__flex:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .productos__flex {
-    transition: all 0.5s;
+    transition: all 0s;
 }
 
 .main__imagenesUno {
@@ -217,46 +272,14 @@ main {
 }
 
 
+.alert {
+    width: 14rem;
+    height: 0.1rem;
+}
 
 
 
-.boton {
-        min-width: 130px;
-        height: 40px;
-        color: #fff;
-        padding: 5px 10px;
-        font-weight: bold;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        position: relative;
-        display: inline-block;
-        outline: none;
-        border-radius: 5px;
-        border: none;
-        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
-        background: #ffd819;
-       z-index: 1;
-      }
-      .css-button-shadow-border-sliding--yellow:hover:after {
-        width: 100%;
-        left: 0;
-      }
-      .css-button-shadow-border-sliding--yellow:after {
-        border-radius: 5px;
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 100%;
-        top: 0;
-        z-index: -1;
-        box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5), 7px 7px 20px 0px rgba(0,0,0,.1), 4px 4px 5px 0px rgba(0,0,0,.1);
-        transition: all 0.3s ease;
-        background-color: #ffe566;
-        right: 0;
-      }
-      .css-button-shadow-border-sliding--yellow:active {
-        top: 2px;
-      }
+
 
 .main__parrafo {
     width: 50%;

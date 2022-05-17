@@ -3,19 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- css -->
+    <link rel="stylesheet" href="css/estilos.css">
     <title>Tienda de muebles y bazar</title>
 </head>
 <body>
     <div class="grid__container">
 
-        <header class="header">
-            <h2 class="header__tituloPrincipal">NICO Y JAZ</h2>
+<!--         <header class="header">
+            <h2 class="header__tituloPrincipal">FURNIMARK</h2>
             <nav class="header__navOrden">
                 <ul class="header__navegacion">
                     <li><a href="index.html"> INICIO</a></li>
@@ -31,17 +35,126 @@
             <div class="header__imagenCabecera">
                 <img class="imagencabecera" src="recursos/imagen-debajo-de-cabecera.webp" alt="muebles minimalistas">
             </div>
-        </header>   
+        </header>    -->
+
+        <header>
+
+            <div class="container-fluid">
+                
+                
+                <div class="row">
+
+                <div class="col">
+                    <nav class="d-flex flex-row navbar navbar-expand-lg navbar-light bg-light">
+                        <a class="header__tituloPrincipal" href="#">FURNIMARK</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/iluminacion.html">Iluminacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/bazar.html">Bazar</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/decoracion.html">Decoracion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="paginas/contacto.html">Contacto</a>
+                            </li>
+                            </ul>
+                            <form class="d-flex">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+                <div class="row">
+                 <div class="col ">
+                     <img class="img-fluid" src="recursos/imagen-debajo-de-cabecera.webp" alt="imagen cabecera">
+                     <div class="main__venta">
+                        <h6 class="main__email">Venta por e-mail: furnimarkcordoba@gmail.com</h6>
+                        <img class="icono__gmail" src="../coderhouse/recursos/icono-gm.png" alt="logo gmail">
+                    </div>
+                </div>   
+                </div>
+            </div>
+        </header>
 
     <!-- contenido general -->
 
         <main class="main"> 
-            <h1 class="main__titulo">TIENDA DE MUEBLES Y BAZAR</h1>
-            <h3 class="main__subtituloUno">OFERTAS EXCLUSIVAS POR EL MES DE ABRIL</h3>
+
+            <h5 class="main__titulo">MUEBLES Y DECO</h5>
+            <hr class="mt-5">
+
+            <div class="container">                        
+                                  <div class="row">
+
+                                    <div data-aos="fade-up" class="col-md-3">
+                                      <div class="card mb-2">
+                                        <img class="card-img-top" src="recursos/carousel1.jpg.webp"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                          <h3 class="card-title">Silla Gervasi Roble Natural</h3>
+                                          <p class="card-text"> <del>13.500,00</del> <strong>10.000,00</strong> </p>
+                                          <a class="btn btn-success">Comprar</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                    <div data-aos="fade-up" class="col-md-3">
+                                      <div class="card mb-2">
+                                        <img class="card-img-top" src="recursos/carousel2.webp"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                          <h3 class="card-title">Sillon Cama Beige </h3>
+                                          <p class="card-text"><del>45.000,00</del><strong>33.000,00</strong></p>
+                                          <a class="btn btn-success">Comprar</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                          
+                                    <div data-aos="fade-up" class="col-md-3">
+                                      <div class="card mb-2">
+                                        <img class="card-img-top" src="recursos/carousel3.webp"
+                                             alt="Card image cap">
+                                        <div class="card-body">
+                                          <h3 class="card-title">Cuadro Unique Gervasoni</h4>
+                                          <p class="card-text"><del>28.000,00</del><strong>22.000,00</strong></p>
+                                          <a class="btn btn-success">Comprar</a>
+                                        </div>
+                                      </div>
+                                    </div>
+
+                                    <div data-aos="fade-up" class="col-md-3">
+                                        <div class="card mb-2">
+                                          <img class="card-img-top" src="recursos/carousel4.webp"
+                                               alt="Card image cap">
+                                          <div class="card-body">
+                                            <h4 class="card-title">Mesa De Piso Iunicua</h4>
+                                            <p class="card-text"><del>13.000,00</del><strong>10.000,00</strong></p>
+                                            <a class="btn btn-success">Comprar</a>
+                                          </div>
+                                        </div>
+                                      </div>
+                                  </div> 
+                                  <hr class="mt-5">
+                                 
+            </div>
+
+            <div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div>
             
 
     <!-- imagenes de productos con descuentos por mes -->       
-            <section class="imagenes">
+          <!--   <section class="imagenes">
                 <div class="main__bloqueImgUno">
                     <img src="recursos/lampara madera.webp" alt="lampara madera"> 
                     <button class="boton">AÑADIR AL CARRITO</button>
@@ -61,22 +174,20 @@
                     <button class="boton">AÑADIR AL CARRITO</button>
                 </div>
             </section>       
-                
-                <h3 class="main__subtituloDos">quienes somos?</h3>
-                <p class="main__parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque recusandae ullam nam dolores modi voluptatem numquam, ut sit vel, necessitatibus fugiat provident beatae est architecto ipsam tenetur sapiente sint magni!</p>
-                <div class="main__ubicacion">
-
-            
-                <!-- ubicacion del local fisico -->    
-                <h3>donde nos encontramos?</h3>
-                <iframe class="main__ubicacion" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d851.0932258214912!2d-64.22391987080145!3d-31.43139939883745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a20df56d4739%3A0xa854f782ca7caf3c!2sPadre%20Lozano%201800-1844%2C%20X5011AVB%20C%C3%B3rdoba!5e0!3m2!1ses!2sar!4v1650659841173!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+            </div> -->
         </main>
 
 
 
         <footer class="footer">redes sociales, todos los derechos reservados</footer>
     </div>
+    
+    <!-- script bootstrapt -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
 
