@@ -35,7 +35,7 @@ header {
     font-size: medium;
     align-items: flex-start;
     height: 4rem;
-    padding: 0px;
+    padding-bottom: 7rem;
 }
 
 .header__tituloPrincipal {
@@ -294,7 +294,7 @@ h6 {
 
 footer {
     grid-area: f;
-    text-align: right;
+    text-align: left;
 }
 
 
@@ -368,9 +368,9 @@ footer {
     }
 
     .grid__imagenes {
-        grid-template-areas: "h h h"
-                            "m m m"
-                            "f f f";
+        grid-template-areas: "h h "
+                            "m m "
+                            "f f ";
     }
 
     .prodImag {
@@ -429,9 +429,9 @@ footer {
     }
 
     .grid__imagenes {
-        grid-template-areas: "h h"
-                            "m m"
-                            "f f";
+        grid-template-areas: "h "
+                            "m "
+                            "f ";
     }   
 
     .prodImag {
