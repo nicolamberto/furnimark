@@ -1,0 +1,11 @@
+@mixin headernoindex ($padding) {
+    grid-area: h;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $color-header;  
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: $padding;
+    
+}
