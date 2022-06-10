@@ -1,17 +1,17 @@
-@media (min-width: 541px) and (max-width: 720px) {
+@media (min-width: 541px) and (max-width: 1006px) {
     
     .header {
         font-size: 0.8rem;
-        padding-bottom: 260px;
+ 
 
             .header--nohtml {
                 font-size: 0.8rem;
-                padding-bottom: 0px;
+                padding-bottom: 0rem;
             }
             
             .header__imagenCabecera {
-                width: 500px;
-                height: 300px;
+                width: 31.25rem;
+                height: 18.75rem;
             }
         
             .header__tituloPrincipal {
@@ -44,8 +44,7 @@
                                 "m m "
                                 "f f ";
                                 .prodImag {
-                                    height: 11.5rem;
-                                    width: 11.5rem;
+                                   
                                 }
                             
         }
@@ -61,18 +60,13 @@
 @media (min-width: 320px) and (max-width: 540px) {
 
     .header {
-        font-size: 0.8rem;
-        padding-bottom: 260px;
 
         .header--nohtml {
             font-size: 0.8rem;
-            padding-bottom: 0px;
-            margin-bottom: 0px;
         }
         
         .header__imagenCabecera {
-            width: 500px;
-            height: 300px;
+            display: none;
         }
     
         .header__tituloPrincipal {
@@ -101,11 +95,8 @@
             grid-template-areas: "h "
                                 "m "
                                 "f ";
-                                .prodImag {
-                                    width: 11.5rem;
-                                    height: 11.5rem;
-                            
-                                }
+
+                    
         }   
 
     }

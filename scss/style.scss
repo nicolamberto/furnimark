@@ -22,17 +22,20 @@ header {
     display: flex;
     flex-wrap: wrap;
     background-color: $color-header;  
-    height: 100px;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 740px;
+    
 
         .header__tituloPrincipal {
             font-family: 'Bebas Neue', cursive;
-            padding: 5px;
-            font-size: 40px;
+            padding: 0.313rem;
+            font-size: 2.5rem;
             align-items: center;
 
+        }
+
+        .alert {
+            height: 1rem;
         }
         
         li {
@@ -56,9 +59,9 @@ header {
         }
         
         .icono__gmail {
-            width: 18px;
-            height: 18px;
-            padding-bottom: 5px;
+            width: 1.125rem;
+            height: 1.125rem;
+            padding-bottom: 0.313rem;
             cursor: pointer;
         }
 }
@@ -84,6 +87,15 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
 
+
+    .main__nohtml {
+        display: flex;
+    }
+
+    .main__index {
+        padding-top: 130vw;
+    }
+
     .main__titulo {
         display: flex;
         color: rgb(0, 0, 0);
@@ -92,22 +104,31 @@ main {
         padding-bottom: 0.7rem;
     }
 
+    .main__buscador {
+        padding-bottom: 1rem;
+    }
+
     .grid__imagenes {
         display: grid;
-        grid-template-areas: 
+        grid-template-areas: "h h h h"
                             "m m m m"
+                            "f f f f"
                             ;
-       width: 500px;
-       height: 500px;
-        padding-left: 4rem;
-        padding-right: 0rem;
-        gap: 1rem;
+        width: 70%;
+        padding-left: 10%;
+        gap: 3rem; 
+    }
+
+
+
+
+        
     
         .productos__flex {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 16rem;        
+            width: 14rem;        
             border-radius: 0.7rem;
             background-color: rgba(248, 248, 248, 0.788);
             transition: all 0s;
@@ -117,6 +138,7 @@ main {
     
             }
         }
+
     
         .botones__productos {
             display: flex;
@@ -138,10 +160,6 @@ main {
     }
     
 
-    
-
-}
-
 
 
 
@@ -153,7 +171,7 @@ main {
 
 footer {
     grid-area: f;
-    text-align: left;
+    padding-top: 2rem;
 }
 
 

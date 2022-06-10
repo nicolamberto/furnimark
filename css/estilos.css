@@ -53,15 +53,15 @@ header {
   display: flex;
   flex-wrap: wrap;
   background-color: rgba(237, 229, 220, 0.975);
-  height: 100px;
   align-items: center;
-  justify-content: space-between;
-  padding-bottom: 740px; }
+  justify-content: space-between; }
   header .header__tituloPrincipal {
     font-family: 'Bebas Neue', cursive;
-    padding: 5px;
-    font-size: 40px;
+    padding: 0.313rem;
+    font-size: 2.5rem;
     align-items: center; }
+  header .alert {
+    height: 1rem; }
   header li {
     padding: 1.2rem; }
   header a {
@@ -75,9 +75,9 @@ header {
     align-items: center;
     justify-content: center; }
   header .icono__gmail {
-    width: 18px;
-    height: 18px;
-    padding-bottom: 5px;
+    width: 1.125rem;
+    height: 1.125rem;
+    padding-bottom: 0.313rem;
     cursor: pointer; }
 
 .header--nohtml {
@@ -98,45 +98,49 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
+  main .main__nohtml {
+    display: flex; }
+  main .main__index {
+    padding-top: 130vw; }
   main .main__titulo {
     display: flex;
     color: black;
     justify-content: center;
     padding-top: 2rem;
     padding-bottom: 0.7rem; }
+  main .main__buscador {
+    padding-bottom: 1rem; }
   main .grid__imagenes {
     display: grid;
-    grid-template-areas: "m m m m";
-    width: 500px;
-    height: 500px;
-    padding-left: 4rem;
-    padding-right: 0rem;
-    gap: 1rem; }
-    main .grid__imagenes .productos__flex {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 16rem;
-      border-radius: 0.7rem;
-      background-color: rgba(248, 248, 248, 0.788);
-      transition: all 0s; }
-      main .grid__imagenes .productos__flex:hover {
-        transform: scale(1.05); }
-    main .grid__imagenes .botones__productos {
-      display: flex;
-      flex-direction: row;
-      gap: 2rem; }
-    main .grid__imagenes .prodImag {
-      width: 15.7rem;
-      height: 16rem;
-      border-radius: 0.7rem; }
-    main .grid__imagenes .alert {
-      width: 14rem;
-      height: 0.1rem; }
+    grid-template-areas: "h h h h" "m m m m" "f f f f";
+    width: 70%;
+    padding-left: 10%;
+    gap: 3rem; }
+  main .productos__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 14rem;
+    border-radius: 0.7rem;
+    background-color: rgba(248, 248, 248, 0.788);
+    transition: all 0s; }
+    main .productos__flex:hover {
+      transform: scale(1.05); }
+  main .botones__productos {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem; }
+  main .prodImag {
+    width: 15.7rem;
+    height: 16rem;
+    border-radius: 0.7rem; }
+  main .alert {
+    width: 14rem;
+    height: 0.1rem; }
 
 footer {
   grid-area: f;
-  text-align: left; }
+  padding-top: 2rem; }
 
 .capa {
   position: absolute;
@@ -149,16 +153,15 @@ footer {
   visibility: hidden;
   text-align: center; }
 
-@media (min-width: 541px) and (max-width: 720px) {
+@media (min-width: 541px) and (max-width: 1006px) {
   .header {
-    font-size: 0.8rem;
-    padding-bottom: 260px; }
+    font-size: 0.8rem; }
     .header .header--nohtml {
       font-size: 0.8rem;
-      padding-bottom: 0px; }
+      padding-bottom: 0rem; }
     .header .header__imagenCabecera {
-      width: 500px;
-      height: 300px; }
+      width: 31.25rem;
+      height: 18.75rem; }
     .header .header__tituloPrincipal {
       font-size: 2rem; }
     .header li {
@@ -171,33 +174,21 @@ footer {
   main .main__subtituloDos {
     text-align: center; }
   main .grid__imagenes {
-    grid-template-areas: "h h " "m m " "f f "; }
-    main .grid__imagenes .prodImag {
-      height: 11.5rem;
-      width: 11.5rem; } }
+    grid-template-areas: "h h " "m m " "f f "; } }
 
 @media (min-width: 320px) and (max-width: 540px) {
-  .header {
-    font-size: 0.8rem;
-    padding-bottom: 260px; }
-    .header .header--nohtml {
-      font-size: 0.8rem;
-      padding-bottom: 0px;
-      margin-bottom: 0px; }
-    .header .header__imagenCabecera {
-      width: 500px;
-      height: 300px; }
-    .header .header__tituloPrincipal {
-      font-size: 2rem; }
-    .header li {
-      padding-left: 0.5rem;
-      padding-right: 0.5rem; }
+  .header .header--nohtml {
+    font-size: 0.8rem; }
+  .header .header__imagenCabecera {
+    display: none; }
+  .header .header__tituloPrincipal {
+    font-size: 2rem; }
+  .header li {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem; }
   main .main__titulo {
     font-size: 1.5rem; }
   main .main__subtituloUno {
     font-size: 1rem; }
   main .grid__imagenes {
-    grid-template-areas: "h " "m " "f "; }
-    main .grid__imagenes .prodImag {
-      width: 11.5rem;
-      height: 11.5rem; } }
+    grid-template-areas: "h " "m " "f "; } }
