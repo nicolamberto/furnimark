@@ -80,16 +80,6 @@ header {
     padding-bottom: 0.313rem;
     cursor: pointer; }
 
-.header--nohtml {
-  grid-area: h;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgba(237, 229, 220, 0.975);
-  height: 100px;
-  align-items: center;
-  justify-content: space-between;
-  padding-bottom: 7rem; }
-
 .btn {
   color: black; }
 
@@ -121,8 +111,7 @@ main {
     flex-direction: column;
     align-items: center;
     width: 14rem;
-    border-radius: 0.7rem;
-    background-color: rgba(248, 248, 248, 0.788);
+    background-color: rgba(248, 248, 248, 0.251);
     transition: all 0s; }
     main .productos__flex:hover {
       transform: scale(1.05); }
@@ -131,16 +120,18 @@ main {
     flex-direction: row;
     gap: 2rem; }
   main .prodImag {
-    width: 15.7rem;
-    height: 16rem;
-    border-radius: 0.7rem; }
-  main .alert {
     width: 14rem;
-    height: 0.1rem; }
+    height: 14rem; }
 
 footer {
   grid-area: f;
   padding-top: 2rem; }
+  footer .redes {
+    display: flex;
+    flex-direction: row; }
+  footer .footer__ubicacion {
+    width: 2rem;
+    height: 2rem; }
 
 .capa {
   position: absolute;
