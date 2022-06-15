@@ -1,4 +1,16 @@
-@media (min-width: 541px) and (max-width: 1006px) {
+
+@media (min-width: 960px) and (max-width: 1200px) {
+    main {
+        .grid__imagenes {
+            grid-template-areas: "h h h"
+                                "m m m"
+                                "f f f"
+        }                       
+    }
+}
+
+
+@media (min-width: 600px) and (max-width: 959px) {
     
     .header {
         font-size: 0.8rem;
@@ -43,9 +55,8 @@
             grid-template-areas: "h h "
                                 "m m "
                                 "f f ";
-                                .prodImag {
-                                   
-                                }
+            padding-left: 17%;
+
                             
         }
 
@@ -57,7 +68,7 @@
  
 
 
-@media (min-width: 320px) and (max-width: 540px) {
+@media (min-width: 320px) and (max-width: 599px) {
 
     .header {
 
@@ -95,6 +106,7 @@
             grid-template-areas: "h "
                                 "m "
                                 "f ";
+            padding-left: 30%;
 
                     
         }   
