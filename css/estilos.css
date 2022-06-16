@@ -7,7 +7,7 @@ y fue todo copiado y pegado, por lo que elegi separarlo por esa razon */
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
-  background: #e1e1e1;
+  background: #b3a619;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
@@ -21,7 +21,7 @@ y fue todo copiado y pegado, por lo que elegi separarlo por esa razon */
   bottom: 0;
   left: 0;
   right: 0;
-  background: #2098D1;
+  background: #d8b424;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 50%;
@@ -82,19 +82,6 @@ header {
     height: 1.125rem;
     padding-bottom: 0.313rem;
     cursor: pointer; }
-  header .capa {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 103, 123, 0.7);
-    transition: all 400ms ease-out;
-    opacity: 0;
-    visibility: hidden;
-    text-align: center; }
-
-.btn {
-  color: black; }
 
 main {
   grid-area: m;
@@ -118,14 +105,27 @@ main {
     grid-template-areas: "h h h h " "m m m m " "f f f f ";
     width: 70%;
     padding-left: 10%;
-    gap: 3rem; }
+    gap: 3rem;
+    /* el mixin lo utilice para realizar los cambios del grid-template-areas para no incluirlos en las mediaqueries y asi simplificar el trabajo */ }
+    @media (min-width: 320px) and (max-width: 599px) {
+      main .grid__imagenes {
+        grid-template-areas: "h" "m" "f";
+        padding-left: 30%; } }
+    @media (min-width: 600px) and (max-width: 959px) {
+      main .grid__imagenes {
+        grid-template-areas: "h h" "m m" "f f";
+        padding-left: 17%; } }
+    @media (min-width: 960px) and (max-width: 1200px) {
+      main .grid__imagenes {
+        grid-template-areas: "h h h" "m m m" "f f f";
+        padding-left: 10%; } }
   main .productos__flex {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 14rem;
     background-color: rgba(248, 248, 248, 0.251);
-    transition: all 0s; }
+    transition: all 0,8s; }
     main .productos__flex:hover {
       transform: scale(1.05); }
   main .botones__productos {
@@ -147,10 +147,6 @@ footer {
     height: 2rem; }
 
 /* aca abajo voy a poner el mixin a utilizar */
-@media (min-width: 960px) and (max-width: 1200px) {
-  main .grid__imagenes {
-    grid-template-areas: "h h h" "m m m" "f f f"; } }
-
 @media (min-width: 600px) and (max-width: 959px) {
   .header {
     font-size: 0.8rem; }
@@ -170,10 +166,7 @@ footer {
   main .main__subtituloUno {
     font-size: 1rem; }
   main .main__subtituloDos {
-    text-align: center; }
-  main .grid__imagenes {
-    grid-template-areas: "h h " "m m " "f f ";
-    padding-left: 17%; } }
+    text-align: center; } }
 
 @media (min-width: 320px) and (max-width: 599px) {
   .header .header--nohtml {
@@ -185,10 +178,11 @@ footer {
   .header li {
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
+  .header .header__alerta {
+    font-size: x-small; }
   main .main__titulo {
     font-size: 1.5rem; }
   main .main__subtituloUno {
     font-size: 1rem; }
-  main .grid__imagenes {
-    grid-template-areas: "h " "m " "f ";
-    padding-left: 30%; } }
+  main footer .footer__info {
+    font-size: x-small; } }
