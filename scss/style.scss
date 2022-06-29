@@ -76,13 +76,6 @@ main {
     flex-wrap: wrap;
     flex-direction: column;
 
-
-
-
-    .main__index {
-        padding-top: 130vw;
-    }
-
     .main__titulo {
         display: flex;
         color: rgb(0, 0, 0);
@@ -97,31 +90,33 @@ main {
         padding-right: 1rem;
     }
 
+    .contenedorgrid {
+        display: flex;
+        justify-content: center;
+    }
+
     .grid__imagenes {
         display: grid;
         grid-template-areas: "h h h h "
                             "m m m m "
                             "f f f f "
                             ;
-        width: 70%;
-        padding-left: 10%;
         gap: 3rem; 
 
 /* el mixin lo utilice para realizar los cambios del grid-template-areas para no incluirlos en las mediaqueries y asi simplificar el trabajo */
 
-        @mixin gridareas($min, $max, $areas, $paddingleft) {
+        @mixin gridareas($min, $max, $areas) {
             @media (min-width: $min) and (max-width: $max) {
                 grid-template-areas: $areas;
-                padding-left: $paddingleft;
             }
         
         }
         
-        @include gridareas(320px, 599px, "h" "m" "f", 30%)
+        @include gridareas(320px, 599px, "h" "m" "f")
 
-        @include gridareas(600px, 959px, "h h" "m m" "f f", 17%)
+        @include gridareas(600px, 959px, "h h" "m m" "f f")
 
-        @include gridareas(960px, 1200px, "h h h" "m m m" "f f f", 10%)
+        @include gridareas(960px, 1200px, "h h h" "m m m" "f f f")
 
 
         }
@@ -188,10 +183,6 @@ footer {
     }
 }
 
-
-
-
-/* aca abajo voy a poner el mixin a utilizar */
 
 
     

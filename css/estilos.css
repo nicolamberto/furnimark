@@ -88,8 +88,6 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column; }
-  main .main__index {
-    padding-top: 130vw; }
   main .main__titulo {
     display: flex;
     color: black;
@@ -100,25 +98,23 @@ main {
     padding-bottom: 1rem;
     padding-top: 1rem;
     padding-right: 1rem; }
+  main .contenedorgrid {
+    display: flex;
+    justify-content: center; }
   main .grid__imagenes {
     display: grid;
     grid-template-areas: "h h h h " "m m m m " "f f f f ";
-    width: 70%;
-    padding-left: 10%;
     gap: 3rem;
     /* el mixin lo utilice para realizar los cambios del grid-template-areas para no incluirlos en las mediaqueries y asi simplificar el trabajo */ }
     @media (min-width: 320px) and (max-width: 599px) {
       main .grid__imagenes {
-        grid-template-areas: "h" "m" "f";
-        padding-left: 30%; } }
+        grid-template-areas: "h" "m" "f"; } }
     @media (min-width: 600px) and (max-width: 959px) {
       main .grid__imagenes {
-        grid-template-areas: "h h" "m m" "f f";
-        padding-left: 17%; } }
+        grid-template-areas: "h h" "m m" "f f"; } }
     @media (min-width: 960px) and (max-width: 1200px) {
       main .grid__imagenes {
-        grid-template-areas: "h h h" "m m m" "f f f";
-        padding-left: 10%; } }
+        grid-template-areas: "h h h" "m m m" "f f f"; } }
   main .productos__flex {
     display: flex;
     flex-direction: column;
@@ -146,7 +142,6 @@ footer {
     width: 2rem;
     height: 2rem; }
 
-/* aca abajo voy a poner el mixin a utilizar */
 @media (min-width: 600px) and (max-width: 959px) {
   .header {
     font-size: 0.8rem; }
@@ -166,7 +161,9 @@ footer {
   main .main__subtituloUno {
     font-size: 1rem; }
   main .main__subtituloDos {
-    text-align: center; } }
+    text-align: center; }
+  .footer__letras {
+    font-size: 13px; } }
 
 @media (min-width: 320px) and (max-width: 599px) {
   .header .header--nohtml {
@@ -175,6 +172,10 @@ footer {
     display: none; }
   .header .header__tituloPrincipal {
     font-size: 2rem; }
+  .header .header__imagentrans {
+    display: none; }
+  .header .header__venta {
+    display: none; }
   .header li {
     padding-left: 0.5rem;
     padding-right: 0.5rem; }
@@ -184,5 +185,7 @@ footer {
     font-size: 1.5rem; }
   main .main__subtituloUno {
     font-size: 1rem; }
-  main footer .footer__info {
-    font-size: x-small; } }
+  main .main__carrusel {
+    display: none; }
+  .footer__letras {
+    font-size: 10px; } }
