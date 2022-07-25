@@ -1,13 +1,12 @@
 {
   "name": "coderhouse",
   "version": "1.0.0",
-  "description": "",
+  "description": "Pagina de venta de muebles online, estilo e-commerce, con un diseño intuitivo que ayuda a elegir de la mejor forma lo que se necesite",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/estilos.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
-   
   },
   "repository": {
     "type": "git",
@@ -21,6 +20,6 @@
   "homepage": "https://github.com/nicolamberto/furnimark#readme",
   "devDependencies": {
     "node-sass": "^7.0.1",
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.19"
   }
 }
