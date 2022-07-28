@@ -83,6 +83,41 @@ header {
     padding-bottom: 0.313rem;
     cursor: pointer; }
 
+.bot-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .bot-header .modal-contenedor {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 1;
+    /* pointer-events: none; */ }
+    .bot-header .modal-contenedor .modal-carrito {
+      margin: auto;
+      width: 90%;
+      max-width: 600px;
+      max-height: 90%;
+      background-color: #fff;
+      border-radius: 3em 2.5em;
+      display: grid;
+      gap: 1em;
+      place-items: center;
+      grid-auto-columns: 100%; }
+      .bot-header .modal-contenedor .modal-carrito .modal-close {
+        background-color: #ad5d2f;
+        color: #fff;
+        border-radius: 6px;
+        transition: background-color .3s; }
+      .bot-header .modal-contenedor .modal-carrito .modal-close:hover {
+        color: #ad5d2f;
+        background-color: #fff; }
+
 main {
   grid-area: m;
   display: flex;
@@ -96,41 +131,48 @@ main {
     padding-bottom: 0.7rem; }
   main .main__buscador {
     padding-bottom: 1rem;
-    padding-top: 1rem;
     padding-right: 1rem; }
   main .contenedorgrid {
     display: flex;
     justify-content: center; }
-  main .grid__imagenes {
-    display: grid;
-    grid-template-areas: "h h h h " "m m m m " "f f f f ";
-    gap: 3rem;
-    /* el mixin lo utilice para realizar los cambios del grid-template-areas para no incluirlos en las mediaqueries y asi simplificar el trabajo */ }
-    @media (min-width: 320px) and (max-width: 599px) {
-      main .grid__imagenes {
-        grid-template-areas: "h" "m" "f"; } }
-    @media (min-width: 600px) and (max-width: 959px) {
-      main .grid__imagenes {
-        grid-template-areas: "h h" "m m" "f f"; } }
-    @media (min-width: 960px) and (max-width: 1200px) {
-      main .grid__imagenes {
-        grid-template-areas: "h h h" "m m m" "f f f"; } }
-  main .productos__flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 14rem;
-    background-color: rgba(248, 248, 248, 0.251);
-    transition: all 0,8s; }
-    main .productos__flex:hover {
-      transform: scale(1.05); }
-  main .botones__productos {
-    display: flex;
-    flex-direction: row;
-    gap: 2rem; }
-  main .prodImag {
-    width: 14rem;
-    height: 14rem; }
+
+.modal--show {
+  opacity: 1;
+  pointer-events: unset; }
+
+.grid__imagenes {
+  display: grid;
+  grid-template-areas: "h h h h " "m m m m " "f f f f ";
+  gap: 3rem;
+  /* el mixin lo utilice para realizar los cambios del grid-template-areas para no incluirlos en las mediaqueries y asi simplificar el trabajo */ }
+  @media (min-width: 320px) and (max-width: 599px) {
+    .grid__imagenes {
+      grid-template-areas: "h" "m" "f"; } }
+  @media (min-width: 600px) and (max-width: 959px) {
+    .grid__imagenes {
+      grid-template-areas: "h h" "m m" "f f"; } }
+  @media (min-width: 960px) and (max-width: 1200px) {
+    .grid__imagenes {
+      grid-template-areas: "h h h" "m m m" "f f f"; } }
+
+.productos__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 14rem;
+  background-color: rgba(248, 248, 248, 0.251);
+  transition: all 0,8s; }
+  .productos__flex:hover {
+    transform: scale(1.05); }
+
+.botones__productos {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; }
+
+.prodImag {
+  width: 14rem;
+  height: 14rem; }
 
 footer {
   grid-area: f;

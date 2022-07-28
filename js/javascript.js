@@ -20,7 +20,27 @@ let stockProductos = [
 
 const contenedorProductos = document.getElementById("contenedor-productos")
 
+const contenedorCarrito = document.getElementById("carrito-contenedor")
+
+const botonVaciar = document.getElementById("vaciar-carrito")
+
+const contadorCarrito = document.getElementById("contadorCarrito")
+
+let precioTotal = document.getElementById("precioTotal")
 let carrito = []
+
+//______________________________________________________________________________________________________________________________________________________//
+
+
+botonVaciar.addEventListener("click", () => {
+    carrito.length = 0,  //se iguala el tamaño del carrito a cero cada vez que se haga click en el boton de vaciar Carrito
+    actualizarCarrito()  // se ejecuta la funcion de actualizar carrito
+})
+
+
+
+//______________________________________________________________________________________________________________________________________________________//
+
 
 stockProductos.forEach((producto)=> {
     const div = document.createElement("div")
@@ -50,10 +70,69 @@ stockProductos.forEach((producto)=> {
 
 })
 
+
+
+//______________________________________________________________________________________________________________________________________________________//
+
+
+
 const agregarAlCarrito = (prodId) => {
     const item = stockProductos.find((prod) => prod.id === prodId)
     carrito.push(item)
+    actualizarCarrito()
     console.log(carrito)
 }
 
+
+
+
+//______________________________________________________________________________________________________________________________________________________//
+
+
+
+
+const eliminarDelCarrito = (prodId) => {   //cuando llamo al eliminar del carrito recibo la id del producto, lo busco por find dentro
+                                         //del parametro
+    const item = carrito.find((prod) => prod.id === prodId)
+    const indice = carrito.indexOf(item)
+    carrito.splice(indice, 1)
+    actualizarCarrito()
+}
+
+
+
+
+
+//______________________________________________________________________________________________________________________________________________________//
+
+
+
+
+
+const actualizarCarrito = ()=> {
+    contenedorCarrito.innerHTML = ""
+    carrito.forEach((prod) => {
+        const div = document.createElement("div")
+        div.className = ("productoEnCarrito")
+        div.innerHTML = `
+        <p>${prod.nombre} </p>
+        <p>Precio ${prod.precio} </p>
+        <p>Cantidad <span id="cantidad">${prod.cantidad} </span> </p>
+        <button onclick ="eliminarDelCarrito(${prod.id} )" class="boton-eliminar><i class = "fas fa-tras-alt"></i> </button>
+        
+        `
+        //a cada boton creado para eliminar del carrito le corremos el evento y la funcion eliminarDelCarrito
+        contenedorCarrito.appendChild(div)
+    })
+    contadorCarrito.innerText = carrito.length
+    precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio, 0)
+}
+
+
+// por cada producto que recorra mi carrito le digo al acumulador que le sume la propiedad precio
+// a mi producto y le damos el valor inicial (0) 
+
+
+
+//______________________________________________________________________________________________________________________________________________________//
 
