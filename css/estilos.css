@@ -83,40 +83,45 @@ header {
     padding-bottom: 0.313rem;
     cursor: pointer; }
 
-.bot-header {
+.bacc {
+  background-color: pink; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center; }
-  .bot-header .modal-contenedor {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #111111bd;
-    display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s; }
+  .modal .modal--show {
     opacity: 1;
-    /* pointer-events: none; */ }
-    .bot-header .modal-contenedor .modal-carrito {
-      margin: auto;
-      width: 90%;
-      max-width: 600px;
-      max-height: 90%;
-      background-color: #fff;
-      border-radius: 3em 2.5em;
-      display: grid;
-      gap: 1em;
-      place-items: center;
-      grid-auto-columns: 100%; }
-      .bot-header .modal-contenedor .modal-carrito .modal-close {
-        background-color: #ad5d2f;
-        color: #fff;
-        border-radius: 6px;
-        transition: background-color .3s; }
-      .bot-header .modal-contenedor .modal-carrito .modal-close:hover {
-        color: #ad5d2f;
-        background-color: #fff; }
+    pointer-events: unset; }
+  .modal .modal__container {
+    margin: auto;
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 3em 2.5em;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%; }
+    .modal .modal__container .modal__close {
+      background-color: #ad5d2f;
+      color: #fff;
+      border-radius: 6px;
+      transition: background-color .3s; }
+    .modal .modal__container .modal-close:hover {
+      color: #ad5d2f;
+      background-color: #fff; }
 
 main {
   grid-area: m;
@@ -135,10 +140,6 @@ main {
   main .contenedorgrid {
     display: flex;
     justify-content: center; }
-
-.modal--show {
-  opacity: 1;
-  pointer-events: unset; }
 
 .grid__imagenes {
   display: grid;

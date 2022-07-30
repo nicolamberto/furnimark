@@ -69,37 +69,43 @@ header {
 }
 
 
-.bot-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    .bacc {
+        background-color: pink;
+    }
 
-    .modal-contenedor {
+    .modal {
         position: fixed;
         top: 0;
-        bottom: 0;
         left: 0;
         right: 0;
+        bottom: 0;
         background-color: #111111bd;
         display: flex;
-        opacity: 1;
-        /* pointer-events: none; */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .6s .9s;
+        --transform: translateY(-100vh);
+        --transition: transform .8s;
 
-        .modal-carrito {
+       .modal--show {
+        opacity: 1;
+        pointer-events: unset;
+        }
+
+        .modal__container {
             margin: auto;
             width: 90%;
             max-width: 600px;
             max-height: 90%;
             background-color: #fff;
-            border-radius: 3em 2.5em;
+            border-radius: 6px;
+            padding: 3em 2.5em;
             display: grid;
             gap: 1em;
             place-items: center;
             grid-auto-columns: 100%;
-            
 
-            .modal-close {
+            .modal__close {
                 background-color: rgb(173, 93, 47);
                 color: #fff;
                 border-radius: 6px;
@@ -111,9 +117,12 @@ header {
                 background-color: #fff;
                 
             }
+
+        
         }
     }
-}
+
+
 
 main {
     grid-area: m;
@@ -140,11 +149,6 @@ main {
     }
 
 }
-
-    .modal--show {
-        opacity: 1;
-        pointer-events: unset;
-    }
 
     .grid__imagenes {
         display: grid;

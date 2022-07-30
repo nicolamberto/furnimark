@@ -49,32 +49,19 @@
                             <a class="nav-link" href="contacto.html">Contacto</a>
                         </li>
                         </ul>
+                        <a href="#" class="hero__cta" id="open-modal"><img src="../recursos/carrito-de-compras (2).png" alt="carrito"></a>
                         <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                         </form>
-                    </div>
-                    </div>
                 </nav>
+                
             </div>
             
             
     </header>
 
-    <div class="bot-header">
-        <div class="modal-contenedor">
-            <div class="modal-carrito">
-                <h3>carrito</h3>
-                <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-                <div id="carrito-contenedor">
-                </div>
-                <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
-                <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
-                <button id="cerrar-modal" class="modal-close">Cerrar</button>
-            </div>
-            
-        </div>
-    </div>
+    
   <!-- boton desplegable para organizar los productos segun como se requiera (no funcional) 
             los href estan con # por que asignarles una ruta al index o a alguna otra pagina lo haria poco
         ergonomico-->
@@ -94,34 +81,41 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="bot-header">
-            <div class="modal-contenedor">
-                <div class="modal-carrito">
-                    <h3>carrito</h3>
-                    <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-                    <div id="carrito-contenedor">
-                    </div>
-                    <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
-                    <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
-                    <button id="cerrar-modal" class="modal-close">Cerrar</button>
-                </div>
-                
-            </div>
-        </div> -->
+       
         
 
-        
-
-        
 
         <div class="contenedorgrid">
-            <section id="contenedor-productos" class="grid__imagenes">
-                
-            </section>
-        </div>
-  
+                <section id="contenedor-productos" class="grid__imagenes"></section>
 
-        
+                <!-- <section class="modal" id="modal">
+                    <div class="modal__container">
+                        <h3>carrito</h3>
+                        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                        <div id="carrito-contenedor">
+                        </div>
+                        <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
+                        <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                        <button id="cerrar-modal" class="modal__close">Cerrar</button>
+                    </div>
+                </section> -->
+                
+                    <div class="modal">
+                        <div class="modal__container">
+                            <h3>carrito</h3>
+                            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                            <div id="carrito-contenedor">
+                            </div>
+                            <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
+                            <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                            <button id="cerrar-modal" class="modal-close">Cerrar</button>
+                        </div>
+                        
+                    </div>
+                
+            
+        </div>
+
     </main>
     <!-- footer al igual que en todas las paginas, con links que derivan al index -->
     <footer>
