@@ -128,6 +128,10 @@ const actualizarCarrito = ()=> {
     precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio, 0)
 }
 
+localStorage.setItem("nombre", "nicolas")
+localStorage.setItem("apelido", "lamberto")
+
+
 
 // por cada producto que recorra mi carrito le digo al acumulador que le sume la propiedad precio
 // a mi producto y le damos el valor inicial (0) 
