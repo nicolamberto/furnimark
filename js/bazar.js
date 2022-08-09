@@ -1,22 +1,27 @@
-
 let stockProductos = [
-    {id: 1, nombre: "frapera1", tipo: "bazar", cantidad: 1, desc: "Frapera de plata", precio: 2450, img:'../recursos/bazar-cocteleraindian.webp'},
-    {id: 2, nombre: "frapera2", tipo: "bazar", cantidad: 1, desc: "Frapera albina", precio: 3750, img:'../recursos/bazar-fraperabalbina.webp'},
-    {id: 3, nombre: "fraperaamery", tipo: "bazar", cantidad: 1, desc: "Frapera amery", precio: 5125, img:'../recursos/bazar-fraperaemery.webp'},
-    {id: 4, nombre: "frascocafe", tipo: "bazar", cantidad: 1, desc: "Frasco para cafe", precio: 2330, img:'../recursos/bazar-frascocafe.webp'},
-    {id: 5, nombre: "servilleteroarctic", tipo: "bazar", cantidad: 1, desc: "Servilletero arctic", precio: 2450, img:'../recursos/bazar-servilleteroartic.webp'},
-    {id: 6, nombre: "taponindian", tipo: "bazar", cantidad: 1, desc: "Tapon indian", precio: 1220, img:'../recursos/bazar-tapoindia.webp'},
-    {id: 7, nombre: "taponconejo", tipo: "bazar", cantidad: 1, desc: "Tapon cola de conejo", precio: 1550, img:'../recursos/bazar-taponconejo.webp'},
-    {id: 8, nombre: "tazavidrio", tipo: "bazar", cantidad: 1, desc: "Taza de vidrio pequena", precio: 2000, img:'../recursos/bazar-tazas.webp'},
-    {id: 9, nombre: "exhibidorvigo", tipo: "bazar", cantidad: 1, desc: "Exhibidor vigo", precio: 2950, img:'../recursos/bazar-exhibidorvigo.webp'},
-    {id: 10, nombre: "mantel", tipo: "bazar", cantidad: 1, desc: "Mantel de seda", precio: 950, img:'../recursos/bazar-mantel.webp'},
-    {id: 11, nombre: "bowl", tipo: "bazar", cantidad: 1, desc: "Bowl vidrio", precio: 7250, img:'../recursos/bazar-bowl.webp'},
-    {id: 12, nombre: "frapera1", tipo: "bazar", cantidad: 1, desc: "Frapera de plata", precio: 2450, img:'../recursos/bazar-cocteleraindian.webp'},
-    {id: 13, nombre: "juegote", tipo: "bazar", cantidad: 1, desc: "Juego de te", precio: 11250, img:'../recursos/bazar-juegodete.webp'},
-    {id: 14, nombre: "posavasos", tipo: "bazar", cantidad: 1, desc: "Posa vasos en forma de dados", precio: 2450, img:'../recursos/bazar-posavasosdados.webp'},
-    {id: 15, nombre: "tenedores", tipo: "bazar", cantidad: 1, desc: "tenedores", precio: 2450, img:'../recursos/bazar-tenedores.webp'},
-    {id: 16, nombre: "vasos", tipo: "bazar", cantidad: 1, desc: "vasos prequenos", precio: 2450, img:'../recursos/bazar-vasos.webp'}
+    {id: 1, tipo: "bazar", cantidad: 1, desc: "Frapera de plata", precio: 2450, img:'../recursos/bazar-cocteleraindian.webp'},
+    {id: 2, tipo: "bazar", cantidad: 1, desc: "Frapera albina", precio: 3750, img:'../recursos/bazar-fraperabalbina.webp'},
+    {id: 3, tipo: "bazar", cantidad: 1, desc: "Frapera amery", precio: 5125, img:'../recursos/bazar-fraperaemery.webp'},
+    {id: 4, tipo: "bazar", cantidad: 1, desc: "Frasco para cafe", precio: 2330, img:'../recursos/bazar-frascocafe.webp'},
+    {id: 5, tipo: "bazar", cantidad: 1, desc: "Servilletero arctic", precio: 2450, img:'../recursos/bazar-servilleteroartic.webp'},
+    {id: 6, tipo: "bazar", cantidad: 1, desc: "Tapon indian", precio: 1220, img:'../recursos/bazar-tapoindia.webp'},
+    {id: 7, tipo: "bazar", cantidad: 1, desc: "Tapon cola de conejo", precio: 1550, img:'../recursos/bazar-taponconejo.webp'},
+    {id: 8, tipo: "bazar", cantidad: 1, desc: "Taza de vidrio pequena", precio: 2000, img:'../recursos/bazar-tazas.webp'},
+    {id: 9, tipo: "bazar", cantidad: 1, desc: "Exhibidor vigo", precio: 2950, img:'../recursos/bazar-exhibidorvigo.webp'},
+    {id: 10, tipo: "bazar", cantidad: 1, desc: "Mantel de seda", precio: 950, img:'../recursos/bazar-mantel.webp'},
+    {id: 11, tipo: "bazar", cantidad: 1, desc: "Bowl vidrio", precio: 7250, img:'../recursos/bazar-bowl.webp'},
+    {id: 12, tipo: "bazar", cantidad: 1, desc: "Frapera de plata", precio: 2450, img:'../recursos/bazar-cocteleraindian.webp'},
+    {id: 13, tipo: "bazar", cantidad: 1, desc: "Juego de te", precio: 11250, img:'../recursos/bazar-juegodete.webp'},
+    {id: 14, tipo: "bazar", cantidad: 1, desc: "Posa vasos en forma de dados", precio: 2450, img:'../recursos/bazar-posavasosdados.webp'},
+    {id: 15, tipo: "bazar", cantidad: 1, desc: "tenedores", precio: 2450, img:'../recursos/bazar-tenedores.webp'},
+    {id: 16, tipo: "bazar", cantidad: 1, desc: "vasos prequenos", precio: 2450, img:'../recursos/bazar-vasos.webp'},
 ]
+
+
+
+
+
+
 
 const contenedorProductos = document.getElementById("contenedor-productos")
 
@@ -77,14 +82,23 @@ stockProductos.forEach((producto)=> {
 
 
 const agregarAlCarrito = (prodId) => {
+    const existe = carrito.some(prod => prod.id === prodId)
+
+    if(existe) {
+        const prod = carrito.map (prod => {
+            if(prod.id === prodId){
+                prod.cantidad++
+            }
+        })
+    } else {
+    
     const item = stockProductos.find((prod) => prod.id === prodId)
     carrito.push(item)
-    actualizarCarrito()
     console.log(carrito)
 }
 
-
-
+actualizarCarrito()
+ }
 
 //______________________________________________________________________________________________________________________________________________________//
 
@@ -115,16 +129,18 @@ const actualizarCarrito = ()=> {
         const div = document.createElement("div")
         div.className = ("productoEnCarrito")
         div.innerHTML = `
-        <p>${prod.nombre} </p>
+        <p>${prod.desc} </p>
         <p>Precio ${prod.precio} </p>
         <p>Cantidad <span id="cantidad">${prod.cantidad} </span> </p>
-        <button onclick ="eliminarDelCarrito(${prod.id} )" class="boton-eliminar><i class = "fas fa-tras-alt"></i> </button>
+        <button onclick ="eliminarDelCarrito(${prod.id} )" class="boton-eliminar">x</button>
         
         `
         //a cada boton creado para eliminar del carrito le corremos el evento y la funcion eliminarDelCarrito
         contenedorCarrito.appendChild(div)
+
+        localStorage.setItem("carrito", JSON.stringify(carrito))
     })
-    contadorCarrito.innerText = carrito.length
+    //contadorCarrito.innerText = carrito.length
     precioTotal.innerText = carrito.reduce ((acc, prod) => acc + prod.precio, 0)
 }
 
@@ -140,17 +156,17 @@ localStorage.setItem("apelido", "lamberto")
 
 //______________________________________________________________________________________________________________________________________________________//
 
-/* const openModal = document.querySelector('.abrirmodal');
+const openModal = document.querySelector('.hero__cta');
 const modal = document.querySelector('.modal');
-const closeModal = document.querySelector('.modal__close');
+const closeModal = document.querySelector('.modal-close');
 
 openModal.addEventListener('click', (e)=>{
     e.preventDefault();
-    modal.classList.add('modal--show');
+    modal.style.display = "flex";
 });
 
 closeModal.addEventListener('click', (e)=>{
     e.preventDefault();
-    modal.classList.remove('modal--show');
+    modal.style.display = "none";
 });
- */
+ 

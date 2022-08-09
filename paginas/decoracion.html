@@ -49,6 +49,7 @@
                                 <a class="nav-link" href="contacto.html">Contacto</a>
                             </li>
                             </ul>
+                            <a href="#" class="hero__cta" id="open-modal"><img src="../recursos/carrito-de-compras (2).png" alt="carrito"></a>
                             <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
@@ -84,10 +85,24 @@
     <!-- aqui comienzan las filas horizontales de productos, estan hechos con forma de carta a la que luego
     se las edito en los estilos -->
             <div class="contenedorgrid">
-                <section class="grid__imagenes">
-                    
-                
+                <section id="contenedor-productos" class="grid__imagenes"></section>
 
+                    
+                <div class="modal">
+                    <div class="modal__container">
+                        <h3>carrito</h3>
+                        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+                        <div id="carrito-contenedor">
+                        <!-- contenido en js -->
+                        </div>
+                        <p class="precioProducto">Precio total: $ <span id="precioTotal">0</span></p>
+                        <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
+                        <button id="cerrar-modal" class="modal-close">Cerrar</button>
+                    </div>
+                    
+                </div>
+                
+<!-- 
                     <div data-aos="zoom-in" >
                         <div class="productos__flex">
                             <img class="prodImag" src="../recursos/decouno.webp" alt="imagen uno">
@@ -277,8 +292,7 @@
                     </div>
 
 
-
-                </section>
+ -->
             </div>       
         </main>
         
@@ -348,7 +362,7 @@
         </footer>
 
 
-
+<script src="../js/decoracion.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();

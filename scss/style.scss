@@ -66,12 +66,12 @@ header {
             cursor: pointer;
         }
 
+        .hero__cta{
+            padding-right: 1rem;
+        }
+
 }
 
-
-    .bacc {
-        background-color: pink;
-    }
 
     .modal {
         position: fixed;
@@ -80,17 +80,13 @@ header {
         right: 0;
         bottom: 0;
         background-color: #111111bd;
-        display: flex;
-        opacity: 0;
-        pointer-events: none;
+        display: none;
+        opacity: 1;
         transition: opacity .6s .9s;
         --transform: translateY(-100vh);
         --transition: transform .8s;
+        
 
-       .modal--show {
-        opacity: 1;
-        pointer-events: unset;
-        }
 
         .modal__container {
             margin: auto;
@@ -118,7 +114,19 @@ header {
                 
             }
 
-        
+            .productoEnCarrito {
+                display: flex;
+                width: 20rem;
+                justify-content: space-between;
+            }
+
+            .boton-eliminar {
+                display: flex;
+                width: 1rem;
+                height: 1rem;
+                text-align: center;
+                justify-content: center;
+            }
         }
     }
 
